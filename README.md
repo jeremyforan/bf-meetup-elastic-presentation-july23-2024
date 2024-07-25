@@ -1,7 +1,6 @@
 # Go Elastically - Meetup Toronto Live Coding Sessions
 
-This repository contains the code samples demonstrated during the [Toronto Elastic Meetup from July 25th 2024](https://www.meetup.com/elasticsearch-toronto/events/301905900/). The primary focus is to showcase the usage of the Elasticsearch Go client for indexing and searching XKCD comics.
-
+This repository contains the code samples demonstrated during the [Toronto Elastic Meetup from July 24th 2024](https://www.meetup.com/elasticsearch-toronto/events/301905900/). The primary focus is to showcase the usage of the Elasticsearch Go client for indexing and searching XKCD comics.
 
 ![KXCD Standards](https://imgs.xkcd.com/comics/standards.png)
 
