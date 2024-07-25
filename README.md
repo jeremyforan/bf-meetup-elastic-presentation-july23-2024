@@ -151,7 +151,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Happy coding! If you have any questions or need further assistance, feel free to open an issue or contact the repository maintainers.
 
-And joiun the Elasticsearch '#meetup-toronto' channel
+And join the Elasticsearch Slack '#meetup-toronto' channel
+- [Elastic Slack](https://ela.st/slack)
+- ['#Meetup-Toronto' channel](https://elasticstack.slack.com/archives/C07AFALCZGB)
 
 ---
 
