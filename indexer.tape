@@ -4,4 +4,4 @@ Set Framerate 16
 
 Type " go run cmd/indexer/main.go"
 Enter
-Sleep 14s
+Sleep 10s
