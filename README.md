@@ -98,6 +98,8 @@ To get started with the code samples, follow the instructions below.
 
 The indexer fetches [XKCD](https://xkcd.com/) comics and indexes them into Elasticsearch. It configures an Elasticsearch client and uses goroutines to download comics asynchronously. The comics are stored in a thread-safe structure. After downloading, the comics are indexed into Elasticsearch using a bulk indexer, which flushes data to Elasticsearch periodically. The program logs progress and errors throughout.
 
+![Demo](out.gif)
+
 ### Searcher
 
 The Indexer program queries an Elasticsearch index for XKCD comics and loops through the results. It configures an Elasticsearch client, and executes a search query for XKCD comics. The response is decoded, and logs each comic, such as ID, score, alt text, day, news, number, and title.
