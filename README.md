@@ -1,10 +1,11 @@
 # Go Elastically - Meetup Toronto Live Coding Sessions
 
-This repository contains the code samples demonstrated during the Elastic Meetup from July 25th 2024. The primary focus is to showcase the usage of the Elasticsearch Go client for indexing and searching XKCD comics.
+This repository contains the code samples demonstrated during the [Toronto Elastic Meetup from July 25th 2024](https://www.meetup.com/elasticsearch-toronto/events/301905900/). The primary focus is to showcase the usage of the Elasticsearch Go client for indexing and searching XKCD comics.
+
 
 ![KXCD Standards](https://imgs.xkcd.com/comics/standards.png)
 
-https://www.meetup.com/elasticsearch-toronto/events/301905900/
+[**XKCD**](https://xkcd.com/) - a webcomic of romance, sarcasm, math, and language
 
 ## Table of Contents
 - [Overview](#overview)
@@ -14,14 +15,13 @@ https://www.meetup.com/elasticsearch-toronto/events/301905900/
 - [Usage](#usage)
   - [Indexer](#indexer)
   - [Searcher](#Searcher)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Overview
 
-In this repository, you will find two main code samples:
+In this repository, you will find two main code samples in the *cmd* directory:
 
-1. **Inderxer**: A Go program that fetches XKCD comics metadata and indeexes them into an elasticsearch cluster.
+1. **Indexer**: A Go program that fetches XKCD comics metadata and indexes them into an elasticsearch cluster.
 2. **Searcher**: A Go program that executes quries to pull stored XKCD comics from the Elasticsearch XKCD index.
 
 These examples illustrate how to use the Elasticsearch Go client to efficiently index and search data.
@@ -29,6 +29,43 @@ These examples illustrate how to use the Elasticsearch Go client to efficiently 
 ## Getting Started
 
 To get started with the code samples, follow the instructions below.
+
+If you have the time I highly recommend you watch [The Go Language](https://www.youtube.com/watch?v=rKnDgT73v8s) video introducing Go to the world.
+
+### API
+
+Each XKCD can be fetched by appending the comic number to the base url
+```
+https://xkcd.com/{comic_number}
+```
+
+To get a json description of that comic, we append /info.0.json to the url
+```
+https://xkcd.com/{comic_number}/info.0.json
+```
+
+This URL will fetch the JSON for the 'Standards' comic
+```
+https://xkcd.com/2963/info.0.json
+```
+
+and return the following
+```json
+{
+  "month": "7",
+  "num": 2963,
+  "link": "",
+  "year": "2024",
+  "news": "",
+  "safe_title": "House Inputs and Outputs",
+  "transcript": "",
+  "alt": "People think power over ethernet is so great, and yet when I try to do water over ethernet everyone yells at me.",
+  "img": "https://imgs.xkcd.com/comics/house_inputs_and_outputs.png",
+  "title": "House Inputs and Outputs",
+  "day": "24"
+}
+```
+
 
 ### Prerequisites
 
@@ -98,29 +135,13 @@ To get started with the code samples, follow the instructions below.
 
 The indexer fetches [XKCD](https://xkcd.com/) comics and indexes them into Elasticsearch. It configures an Elasticsearch client and uses goroutines to download comics asynchronously. The comics are stored in a thread-safe structure. After downloading, the comics are indexed into Elasticsearch using a bulk indexer, which flushes data to Elasticsearch periodically. The program logs progress and errors throughout.
 
-![Demo](out.gif)
+![Indexer Demo](indexer.gif)
 
 ### Searcher
 
-The Indexer program queries an Elasticsearch index for XKCD comics and loops through the results. It configures an Elasticsearch client, and executes a search query for XKCD comics. The response is decoded, and logs each comic, such as ID, score, alt text, day, news, number, and title.
+The Searcher program queries an Elasticsearch index for XKCD comics and loops through the results. It configures an Elasticsearch client, and executes a search query for XKCD comics. The response is decoded, and logs each comic, such as ID, score, alt text, day, news, number, and title.
 
-1. Ensure your Elasticsearch instance is running. You can use Docker to start an instance:
-
-    ```sh
-    docker run -d -p 9200:9200 -e "discovery.type=single-node" elasticsearch:7.10.1
-    ```
-
-2. Run the uploader:
-
-    ```sh
-    go run uploader/main.go
-    ```
-
-3. The data from `comics.json` will be indexed into Elasticsearch, and you can use Kibana or any other client to search for the comics.
-
-## Contributing
-
-We welcome contributions from the community. If you have suggestions or improvements, please open an issue or submit a pull request.
+![Searcher Demo](searcher.gif)
 
 ## License
 
@@ -130,10 +151,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Happy coding! If you have any questions or need further assistance, feel free to open an issue or contact the repository maintainers.
 
+And joiun the Elasticsearch '#meetup-toronto' channel
+
 ---
 
 **Maintainers:**
-- Your Name ([@yourusername](https://github.com/yourusername))
+- Jeremy Foran ([@jeremyforan](https://github.com/jeremyforan))
 
 ---
 
