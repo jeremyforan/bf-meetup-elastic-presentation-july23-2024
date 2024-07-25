@@ -118,8 +118,8 @@ and return the following
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/jeremyforan/bf-meetup-elastic-presentation-july23-2024.git
-    cd bf-meetup-elastic-presentation-july23-2024
+    git clone https://github.com/jeremyforan/bf-meetup-elastic-presentation-july24-2024.git
+    cd bf-meetup-elastic-presentation-july24-2024
     ```
 
 2. Install the required Go packages:
