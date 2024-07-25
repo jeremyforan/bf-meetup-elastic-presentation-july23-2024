@@ -164,3 +164,4 @@ And joiun the Elasticsearch '#meetup-toronto' channel
 
 - [Elasticsearch Go Client Documentation](https://github.com/elastic/go-elasticsearch)
 - [XKCD API Documentation](https://xkcd.com/json.html)
+- [Json to Go Struct](https://mholt.github.io/json-to-go/)
