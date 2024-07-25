@@ -45,23 +45,23 @@ https://xkcd.com/{comic_number}/info.0.json
 
 This URL will fetch the JSON for the 'Standards' comic
 ```
-https://xkcd.com/2963/info.0.json
+https://xkcd.com/927/info.0.json
 ```
 
 and return the following
 ```json
 {
   "month": "7",
-  "num": 2963,
+  "num": 927,
   "link": "",
-  "year": "2024",
+  "year": "2011",
   "news": "",
-  "safe_title": "House Inputs and Outputs",
-  "transcript": "",
-  "alt": "People think power over ethernet is so great, and yet when I try to do water over ethernet everyone yells at me.",
-  "img": "https://imgs.xkcd.com/comics/house_inputs_and_outputs.png",
-  "title": "House Inputs and Outputs",
-  "day": "24"
+  "safe_title": "Standards",
+  "transcript": "HOW STANDARDS PROLIFERATE\n(See: A\nC chargers, character encodings, instant messaging, etc.)\n\nSITUATION:\nThere are 14 competing standards.\n\nGeek: 14?! Ridiculous! We need to develop one universal standard that covers everyone's use cases.\nFellow Geek: Yeah!\n\nSoon:\nSITUATION:\nThere are 15 competing standards.\n\n{{Title text: Fortunately, the charging one has been solved now that we've all standardized on mini-USB. Or is it micro-USB? Shit.}}",
+  "alt": "Fortunately, the charging one has been solved now that we've all standardized on mini-USB. Or is it micro-USB? Shit.",
+  "img": "https://imgs.xkcd.com/comics/standards.png",
+  "title": "Standards",
+  "day": "20"
 }
 ```
 
